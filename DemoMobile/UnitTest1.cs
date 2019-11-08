@@ -1,3 +1,4 @@
+using DemoMobile;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
@@ -12,17 +13,10 @@ namespace Tests
 {
     public class Tests
     {
-        private static AndroidDriver<AndroidElement> _driver;
         [SetUp]
         public void Setup()
         {
-            var cap = new AppiumOptions();
-            cap.AddAdditionalCapability(MobileCapabilityType.DeviceName,"Nexus");
-            cap.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "10.0");
-            cap.AddAdditionalCapability(MobileCapabilityType.App, "C:/Users/alexandru.lapuste/Desktop/Smcs.MobileClient.Droid.apk");
-            cap.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
-            cap.AddAdditionalCapability(MobileCapabilityType.FullReset, true);
-            _driver = new AndroidDriver<AndroidElement>(new Uri("http://127.0.0.1:4723/wd/hub"), cap);
+            TestBase.rootInit();
         }
         
         [Test]
@@ -31,10 +25,12 @@ namespace Tests
             //implicit wait
             //_driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             //explicit wait
-            AndroidElement email = (AndroidElement)new WebDriverWait(_driver,TimeSpan.FromSeconds(30)).Until(
-                ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
+            //AndroidElement email = (AndroidElement)new WebDriverWait(_driver,TimeSpan.FromSeconds(30)).Until(
+            //ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
             //AndroidElement email = _driver.FindElementByAccessibilityId("email");
-            email.SendKeys("alexandru.lapuste@amdaris.com");
+            //email.SendKeys("alexandru.lapuste@amdaris.com");
+            LoginPage lp = new LoginPage();
+            lp.doLogin("smcs.materialcontroller@test.com", "Pass123$");
             Assert.Pass();
         }
     }
