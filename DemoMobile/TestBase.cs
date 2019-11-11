@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Appium;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
 using System;
@@ -11,7 +12,7 @@ namespace DemoMobile
     {
 
 
-        public static AndroidDriver<AndroidElement> _driver { get; set; }
+        public static AndroidDriver<IWebElement> driver { get; set; }
         public static void rootInit()
         {
             var cap = new AppiumOptions();
@@ -20,8 +21,10 @@ namespace DemoMobile
             cap.AddAdditionalCapability(MobileCapabilityType.App, "C:/Users/alexandru.lapuste/Desktop/Smcs.MobileClient.Droid.apk");
             cap.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             cap.AddAdditionalCapability(MobileCapabilityType.FullReset, true);
-            _driver = new AndroidDriver<AndroidElement>(new Uri("http://127.0.0.1:4723/wd/hub"), cap);
+            driver = new AndroidDriver<IWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), cap);
         }
+
+        
 
         
     }

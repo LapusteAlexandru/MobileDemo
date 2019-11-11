@@ -18,20 +18,28 @@ namespace Tests
         {
             TestBase.rootInit();
         }
+
+        [TearDown]
+
+        public void TearDown()
+        {
+            TestBase.driver.Quit();
+        }
         
         [Test]
-        public void Test1()
+        public void testSuccessfulLogin()
         {
-            //implicit wait
-            //_driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-            //explicit wait
-            //AndroidElement email = (AndroidElement)new WebDriverWait(_driver,TimeSpan.FromSeconds(30)).Until(
-            //ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
-            //AndroidElement email = _driver.FindElementByAccessibilityId("email");
-            //email.SendKeys("alexandru.lapuste@amdaris.com");
-            LoginPage lp = new LoginPage();
+            LoginPage lp = new LoginPage(TestBase.driver);
             lp.doLogin("smcs.materialcontroller@test.com", "Pass123$");
             Assert.Pass();
+        }
+
+        [Test]
+        public void resetPassBtnLoadsPage()
+        {
+            LoginPage lp= new LoginPage(TestBase.driver);
+            ForgotPassword fp = lp.ForgotPassword();
+            fp.PageLoad();
         }
     }
 }
