@@ -30,8 +30,8 @@ namespace Tests
         public void testSuccessfulLogin()
         {
             LoginPage lp = new LoginPage(TestBase.driver);
-            lp.doLogin("smcs.materialcontroller@test.com", "Pass123$");
-            Assert.Pass();
+            DashboardPage dp=lp.DoLogin("smcs.materialcontroller@test.com", "Pass123$");
+            
         }
 
         [Test]

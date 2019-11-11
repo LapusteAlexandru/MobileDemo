@@ -29,10 +29,9 @@ namespace DemoMobile
         [FindsBy(How = How.Id, Using = "android:id/message")]
         public IWebElement invalidCredentialsMsg { get; set; }
 
-        public DashboardPage doLogin(string email,string password)
+        public DashboardPage DoLogin(string email,string password)
         {
-            IWebElement wait = new WebDriverWait(TestBase.driver, TimeSpan.FromSeconds(30)).Until(
-                ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
+            TestBase.wait.Until(ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
             this.email.SendKeys(email);
             this.password.SendKeys(password);
             btnSignIn.Click();
@@ -42,8 +41,7 @@ namespace DemoMobile
 
         public ForgotPassword ForgotPassword()
         {
-            IWebElement wait = new WebDriverWait(TestBase.driver, TimeSpan.FromSeconds(30)).Until(
-                ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
+            TestBase.wait.Until(ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
             forgotPassword.Click();
             return new ForgotPassword(TestBase.driver);
         }
