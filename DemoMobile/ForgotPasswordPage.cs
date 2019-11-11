@@ -8,9 +8,9 @@ using System.Text;
 
 namespace DemoMobile
 {
-    class ForgotPassword
+    class ForgotPasswordPage
     {
-        public ForgotPassword(AndroidDriver<IWebElement> _driver)
+        public ForgotPasswordPage(AndroidDriver<IWebElement> _driver)
         {
             PageFactory.InitElements(_driver, this);
         }
@@ -20,7 +20,7 @@ namespace DemoMobile
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.Button")]
         public IWebElement btnSend { get; set; }
         
-        public IList<IWebElement> primaryElements = new List<IWebElement>() { };
+        public IList<IWebElement> mainElements = new List<IWebElement>();
         
 
         public void ResetPassword(string email)
@@ -29,15 +29,11 @@ namespace DemoMobile
             btnSend.Click();
         }
 
-        public void PageLoad()
+        public IList<IWebElement> GetMainElements()
         {
-            primaryElements.Add(email);
-            primaryElements.Add(btnSend);
-
-            foreach(IWebElement e in primaryElements)
-            {
-                Assert.That(e.Displayed);
-            }
+            mainElements.Add(email);
+            mainElements.Add(btnSend);
+            return mainElements;
         }
     }
 }

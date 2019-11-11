@@ -16,7 +16,7 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
-            TestBase.rootInit();
+            TestBase.RootInit();
         }
 
         [TearDown]
@@ -27,7 +27,7 @@ namespace Tests
         }
         
         [Test]
-        public void testSuccessfulLogin()
+        public void TestSuccessfulLogin()
         {
             LoginPage lp = new LoginPage(TestBase.driver);
             DashboardPage dp=lp.DoLogin("smcs.materialcontroller@test.com", "Pass123$");
@@ -35,11 +35,15 @@ namespace Tests
         }
 
         [Test]
-        public void resetPassBtnLoadsPage()
+        public void ResetPassBtnLoadsPage()
         {
             LoginPage lp= new LoginPage(TestBase.driver);
-            ForgotPassword fp = lp.ForgotPassword();
-            fp.PageLoad();
+            ForgotPasswordPage fp = lp.ForgotPassword();
+ 
+            foreach(IWebElement e in fp.GetMainElements())
+            {
+                Assert.That(e.Displayed);
+            }
         }
     }
 }

@@ -17,7 +17,7 @@ namespace DemoMobile
 
         public static WebDriverWait wait { get; set; }
         
-        public static void rootInit()
+        public static void RootInit()
         {
             var cap = new AppiumOptions();
             cap.AddAdditionalCapability(MobileCapabilityType.DeviceName, "Nexus");

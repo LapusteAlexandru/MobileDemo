@@ -39,11 +39,11 @@ namespace DemoMobile
             return new DashboardPage();
         }
 
-        public ForgotPassword ForgotPassword()
+        public ForgotPasswordPage ForgotPassword()
         {
             TestBase.wait.Until(ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
             forgotPassword.Click();
-            return new ForgotPassword(TestBase.driver);
+            return new ForgotPasswordPage(TestBase.driver);
         }
 
     }
