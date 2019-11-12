@@ -1,0 +1,16 @@
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\DemoMobile.deps.json
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\DemoMobile.runtimeconfig.json
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\DemoMobile.runtimeconfig.dev.json
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\DemoMobile.dll
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.csproj.CoreCompileInputs.cache
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.AssemblyInfoInputs.cache
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.AssemblyInfo.cs
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\DemoMobile.pdb
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.dll
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.pdb
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.sourcelink.json
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\nunit.engine.dll
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\nunit.engine.api.dll
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.csprojAssemblyReference.cache

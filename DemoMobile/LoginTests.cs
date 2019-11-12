@@ -31,7 +31,8 @@ namespace Tests
         {
             LoginPage lp = new LoginPage(TestBase.driver);
             DashboardPage dp=lp.DoLogin("smcs.materialcontroller@test.com", "Pass123$");
-            
+            TestBase.wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.support.v4.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]")));
+            Assert.That(dp.username.GetAttribute("text").Contains("SMCS Material Controller"));
         }
 
         [Test]

@@ -36,7 +36,7 @@ namespace DemoMobile
             this.password.SendKeys(password);
             btnSignIn.Click();
 
-            return new DashboardPage();
+            return new DashboardPage(TestBase.driver);
         }
 
         public ForgotPasswordPage ForgotPassword()
