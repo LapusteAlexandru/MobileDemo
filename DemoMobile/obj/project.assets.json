@@ -65,6 +65,12 @@
           "lib/netstandard2.0/SeleniumExtras.PageObjects.dll": {}
         }
       },
+      "Legacy2CPSWorkaround/1.0.0": {
+        "type": "package",
+        "build": {
+          "build/netstandard1.0/Legacy2CPSWorkaround.props": {}
+        }
+      },
       "Microsoft.Build.Tasks.Git/1.0.0-beta2-19554-01": {
         "type": "package",
         "build": {
@@ -1854,6 +1860,19 @@
         "lib/net40/SeleniumExtras.PageObjects.dll",
         "lib/net45/SeleniumExtras.PageObjects.dll",
         "lib/netstandard2.0/SeleniumExtras.PageObjects.dll"
+      ]
+    },
+    "Legacy2CPSWorkaround/1.0.0": {
+      "sha512": "GU/g1RQyByRq2wOXvIIK28VZWHHHWoKRw+udnY9hhkqUSvsnbqfI9ecPd5MnQdO+oE02I9To2lABDEQ2CnlmJw==",
+      "type": "package",
+      "path": "legacy2cpsworkaround/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netstandard1.0/Legacy2CPSWorkaround.props",
+        "build/portable-net4+sl4+wp7+win8/Legacy2CPSWorkaround.props",
+        "legacy2cpsworkaround.1.0.0.nupkg.sha512",
+        "legacy2cpsworkaround.nuspec"
       ]
     },
     "Microsoft.Build.Tasks.Git/1.0.0-beta2-19554-01": {
@@ -6284,6 +6303,7 @@
     ".NETCoreApp,Version=v2.2": [
       "Appium.WebDriver >= 4.0.0.6-beta",
       "DotNetSeleniumExtras.PageObjects.Core >= 3.12.0",
+      "Legacy2CPSWorkaround >= 1.0.0",
       "Microsoft.Build.Tasks.Git >= 1.0.0-beta2-19554-01",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -6345,6 +6365,11 @@
           "DotNetSeleniumExtras.PageObjects.Core": {
             "target": "Package",
             "version": "[3.12.0, )"
+          },
+          "Legacy2CPSWorkaround": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.0.0, )"
           },
           "Microsoft.Build.Tasks.Git": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers",
