@@ -13,3 +13,5 @@ C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcorea
 C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\nunit.engine.dll
 C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\nunit.engine.api.dll
 C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.csprojAssemblyReference.cache
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\DemoMobile.dll.config
+C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.sourcelink.json
