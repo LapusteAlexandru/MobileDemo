@@ -4,7 +4,6 @@ C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcorea
 C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\DemoMobile.runtimeconfig.json
 C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\DemoMobile.runtimeconfig.dev.json
 C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\DemoMobile.dll
-C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.csproj.CoreCompileInputs.cache
 C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.AssemblyInfoInputs.cache
 C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\obj\Debug\netcoreapp2.2\DemoMobile.AssemblyInfo.cs
 C:\Users\alexandru.lapuste\source\repos\DemoMobile\DemoMobile\bin\Debug\netcoreapp2.2\DemoMobile.pdb

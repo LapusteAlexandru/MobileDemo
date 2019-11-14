@@ -28,7 +28,8 @@ namespace Tests
             cap.AddAdditionalCapability(MobileCapabilityType.App, "C:/Users/alexandru.lapuste/Desktop/Smcs.MobileClient.Droid.apk");
             cap.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             cap.AddAdditionalCapability(MobileCapabilityType.FullReset, true);
-            driver = new AndroidDriver<IWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), cap);
+            cap.AddAdditionalCapability(MobileCapabilityType.FullReset, true);
+            driver = new AndroidDriver<IWebElement>(new Uri("http://localhost:4444/wd/hub"), cap);
 
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
         }
@@ -49,19 +50,21 @@ namespace Tests
             //Assert.That(dp.username.GetAttribute("text").Contains("SMCS Material Controller"));
             wait.Until(ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
             IWebElement email = driver.FindElement(By.XPath("//android.widget.EditText[@content-desc='email']"));
+            email.Clear();
             email.SendKeys("smcs.materialcontroller@test.com");
             IWebElement password = driver.FindElement(By.XPath("//android.widget.EditText[@content-desc='password']"));
+            password.Clear();
             password.SendKeys("Pass123$");
             IWebElement btnSignIn = driver.FindElement(By.XPath("//android.widget.Button[@content-desc='signin']"));
             btnSignIn.Click();
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.support.v4.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]")));
-
             IWebElement username = driver.FindElement(By.XPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.support.v4.widget.DrawerLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]"));
+            Assert.That(username.Displayed);
             Assert.That(username.GetAttribute("text").Contains("SMCS Material Controller"));
         }
 
         [Test]
-        public void ResetPassBtnLoadsPage()
+        public void TestResetPassBtnLoadsPage()
         {
             LoginPage lp= new LoginPage(TestBase.driver);
             ForgotPasswordPage fp = lp.ForgotPassword();
