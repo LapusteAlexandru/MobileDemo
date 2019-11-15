@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Appium.WebDriver" Version="4.0.0.6-beta" />
     <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="3.12.0" />
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="Microsoft.Build.Tasks.Git" Version="1.0.0-beta2-19554-01">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>

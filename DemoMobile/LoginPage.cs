@@ -3,9 +3,7 @@ using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DemoMobile
 {
@@ -40,22 +38,15 @@ namespace DemoMobile
             mainElements.Add(forgotPassword);
             return mainElements;
         }
-        public void DoLogin(string email,string password)
+        public DashboardPage DoLogin(string email,string password)
         {
-            TestBase.wait.Until(ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
+            TestBase.wait.Until(ExpectedConditions.ElementToBeClickable(this.email));
+            this.email.Clear();
             this.email.SendKeys(email);
+            this.password.Clear();
             this.password.SendKeys(password);
             btnSignIn.Click();
-
-            //return new DashboardPage(TestBase.driver);
+            return new DashboardPage(TestBase.driver);
         }
-
-        public ForgotPasswordPage ForgotPassword()
-        {
-            TestBase.wait.Until(ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
-            forgotPassword.Click();
-            return new ForgotPasswordPage(TestBase.driver);
-        }
-
     }
 }

@@ -5,8 +5,6 @@ using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DemoMobile
 {
@@ -27,11 +25,8 @@ namespace DemoMobile
             cap.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             cap.AddAdditionalCapability(MobileCapabilityType.FullReset, true);
             driver = new AndroidDriver<IWebElement>(new Uri("http://localhost:4444/wd/hub"), cap);
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));
         }
 
-        
-
-        
     }
 }

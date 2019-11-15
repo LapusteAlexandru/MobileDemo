@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[3.12.0, )"
             },
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
             "Legacy2CPSWorkaround": {
               "suppressParent": "All",
               "target": "Package",
