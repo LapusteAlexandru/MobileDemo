@@ -26,7 +26,7 @@ namespace DemoMobile
             cap.AddAdditionalCapability(MobileCapabilityType.App, "C:/Users/alexandru.lapuste/Desktop/Smcs.MobileClient.Droid.apk");
             cap.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             cap.AddAdditionalCapability(MobileCapabilityType.FullReset, true);
-            driver = new AndroidDriver<IWebElement>(new Uri("http://127.0.0.1:4723/wd/hub"), cap);
+            driver = new AndroidDriver<IWebElement>(new Uri("http://localhost:4444/wd/hub"), cap);
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
         }
 

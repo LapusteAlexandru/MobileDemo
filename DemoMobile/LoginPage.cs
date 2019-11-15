@@ -16,6 +16,7 @@ namespace DemoMobile
             PageFactory.InitElements(_driver, this);
         }
 
+
         [FindsBy(How=How.XPath,Using = "//android.widget.EditText[@content-desc='email']")]
         public IWebElement email {get;set;}
         [FindsBy(How = How.XPath, Using = "//android.widget.EditText[@content-desc='password']")]
@@ -29,14 +30,24 @@ namespace DemoMobile
         [FindsBy(How = How.Id, Using = "android:id/message")]
         public IWebElement invalidCredentialsMsg { get; set; }
 
-        public DashboardPage DoLogin(string email,string password)
+        public IList<IWebElement> mainElements = new List<IWebElement>();
+        public IList<IWebElement> GetMainElements()
+        {
+            mainElements.Add(email);
+            mainElements.Add(password);
+            mainElements.Add(btnSignIn);
+            mainElements.Add(logo);
+            mainElements.Add(forgotPassword);
+            return mainElements;
+        }
+        public void DoLogin(string email,string password)
         {
             TestBase.wait.Until(ExpectedConditions.ElementIsVisible(MobileBy.AccessibilityId("email")));
             this.email.SendKeys(email);
             this.password.SendKeys(password);
             btnSignIn.Click();
 
-            return new DashboardPage(TestBase.driver);
+            //return new DashboardPage(TestBase.driver);
         }
 
         public ForgotPasswordPage ForgotPassword()

@@ -19,7 +19,7 @@ namespace DemoMobile
         public IWebElement email { get; set; }
         [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.Button")]
         public IWebElement btnSend { get; set; }
-        
+
         public IList<IWebElement> mainElements = new List<IWebElement>();
         
 
