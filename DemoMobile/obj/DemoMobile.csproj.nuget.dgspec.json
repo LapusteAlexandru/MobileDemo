@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[4.0.0.6-beta, )"
             },
+            "DotNetSeleniumExtras.PageObjects": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
             "DotNetSeleniumExtras.PageObjects.Core": {
               "target": "Package",
               "version": "[3.12.0, )"

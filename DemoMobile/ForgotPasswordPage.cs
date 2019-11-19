@@ -17,11 +17,16 @@ namespace DemoMobile
 
         [FindsBy(How = How.Id, Using = "Smcs.MobileClient.Droid:id/materialformsedittext")]
         public IWebElement email { get; set; }
-        [FindsBy(How = How.XPath, Using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.Button")]
+        [FindsBy(How = How.XPath, Using = "//android.widget.Button[contains(@text,'SEND')]")]
         public IWebElement btnSend { get; set; }
 
         public IList<IWebElement> mainElements = new List<IWebElement>();
-        
+        public IList<IWebElement> GetMainElements()
+        {
+            mainElements.Add(email);
+            mainElements.Add(btnSend);
+            return mainElements;
+        }
 
         public void ResetPassword(string email)
         {
@@ -29,11 +34,6 @@ namespace DemoMobile
             btnSend.Click();
         }
 
-        public IList<IWebElement> GetMainElements()
-        {
-            mainElements.Add(email);
-            mainElements.Add(btnSend);
-            return mainElements;
-        }
+        
     }
 }

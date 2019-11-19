@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DemoMobile": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}

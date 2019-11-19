@@ -9,6 +9,7 @@
       "DemoMobile/1.0.0": {
         "dependencies": {
           "Appium.WebDriver": "4.0.0.6-beta",
+          "DotNetSeleniumExtras.PageObjects": "3.11.0",
           "DotNetSeleniumExtras.PageObjects.Core": "3.12.0",
           "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
           "Legacy2CPSWorkaround": "1.0.0",

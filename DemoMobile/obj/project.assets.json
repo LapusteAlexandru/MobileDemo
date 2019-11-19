@@ -6329,6 +6329,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Appium.WebDriver >= 4.0.0.6-beta",
+      "DotNetSeleniumExtras.PageObjects >= 3.11.0",
       "DotNetSeleniumExtras.PageObjects.Core >= 3.12.0",
       "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
       "Legacy2CPSWorkaround >= 1.0.0",
@@ -6389,6 +6390,10 @@
           "Appium.WebDriver": {
             "target": "Package",
             "version": "[4.0.0.6-beta, )"
+          },
+          "DotNetSeleniumExtras.PageObjects": {
+            "target": "Package",
+            "version": "[3.11.0, )"
           },
           "DotNetSeleniumExtras.PageObjects.Core": {
             "target": "Package",
